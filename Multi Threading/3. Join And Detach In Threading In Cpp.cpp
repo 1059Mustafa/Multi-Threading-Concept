@@ -32,7 +32,7 @@ void run(int count) {
 int main() {
 	std::thread t1(run, 10);
 	cout << "main()" << endl;
-	
+	t1.join();
 	cout << "main() after" << endl;
 	//std::this_thread::sleep_for(chrono::seconds(5));
 	return 0;
